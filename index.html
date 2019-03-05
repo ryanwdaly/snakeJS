@@ -1,3 +1,4 @@
+<!-- snakeJS is a program inspired by freeCodeCamp.org inspired by a nokia app inspired by a classic -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SnakeJS</title>
+
+    <!-- require is a function that returns an empty object -->
+    <!-- module is an empty object -->
+    <!-- module.exports exports constants then functions that are not available in init browser-->
     <script>require=()=>({}); module={}; module.exports=()=>({})</script>
     <script src="base.js"></script>
     <script src="snake.js"></script>
-    <script src="web.js"></script>
+    <script src="web.js"></script> 
 </head>
 <body>
     <canvas id="gc" width="700" height="500"></canvas>
@@ -49,20 +54,5 @@
         ctx.fillStyle="black";
         ctx.fillRect=(0,0,canv.width,canv.height); 
     }
-    function keyPush(event) {
-        switch(event.keyCode) {
-            case 37: //left
-                xv = -1; yv = 0;
-                break;
-            case 38: //up
-                xv = 0; yv = -1;
-                break;
-            case 39: //right
-                xv = 1; yv = 0;
-                break;
-            case 40: //down
-                xv = 0; yv = 1;
-                break;
-        }
-    }
+
 </script>
