@@ -6,53 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SnakeJS</title>
-
+    <link rel="stylesheet" href="web.css">
     <!-- require is a function that returns an empty object -->
     <!-- module is an empty object -->
     <!-- module.exports exports constants then functions that are not available in init browser-->
     <script>require=()=>({}); module={}; module.exports=()=>({})</script>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="500"></canvas>
     <script src="base.js"></script>
     <script src="snake.js"></script>
     <script src="web.js"></script> 
-</head>
-<body>
-    <canvas id="gc" width="700" height="500"></canvas>
     
 </body>
 </html>
-
-
-<!-- --------------------------------------------------------- -->
-
-<script>
-    window.onload = function() {
-        canv = document.getElementById("gc");
-        ctx = canv.getContext("2d");
-        document.addEventListener("keydown", keyPush);
-        setInterval(game,1000/15)
-    }
-
-    px=py=10; //player position
-    gs=tc=20; //grid size and tile count
-    ax=ay=15 //apple postion
-    xv=yv-0;
-    function game() {
-        px+=xv;
-        py+=yv;
-        if(px<0) {
-            px = tc-1;
-        }
-        if(px>tc-1) {
-            px = 0;
-        }
-        if(py<0) {
-            py = tc - 1;
-        }
-        if(py> tc - 1) {
-            py = 0;
-        }
-        ctx.fillStyle="black";
-        ctx.fillRect=(0,0,canv.width,canv.height); 
-    }
-
-</script>
